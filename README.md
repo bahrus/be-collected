@@ -3,24 +3,19 @@
 Collect/collate information that can be gleaned from HTML containing lists of data
 
 ```html
-<details>
-    <summary>...</summary>
-    <template be-repeated be-bucket-listed='{
-        "from": "details",
+<details be-collected='{
         "scopeSelectors": ["itemscope"],
         "format": "csvJSON",
         "propSelectors": {
-            "[itemprop]": "textContent",
             "a[itemprop]": "href",
-            "input[type=&apos;text&apos;]": "value",
+            "[itemprop]": "textContent",
             "input[type=&apos;number&apos;]": "valueAsNumber",
+            "input[type=&apos;text&apos;]": "value",
         },
-        "passTo":{
-            "proxy": "repeated",
-            "prop": "listVal"
-        },
-        "beNoticed":
+        "refreshOn": [],
     }'>
+    <summary>...</summary>
+    <template be-repeated >
     <div aria-columnheader></div>
     </template>
     <details itemscope>
