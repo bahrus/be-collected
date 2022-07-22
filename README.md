@@ -4,18 +4,23 @@ Collect/collate information that can be gleaned from HTML containing lists of da
 
 ```html
 <details be-collected='{
-        "scopeSelectors": ["itemscope"],
-        "format": "csvJSON",
-        "propSelectors": {
-            "a[itemprop]": "href",
-            "[itemprop]": "textContent",
-            "input[type=&apos;number&apos;]": "valueAsNumber",
-            "input[type=&apos;text&apos;]": "value",
+        "scopeSelectors": [{
+            "itemscope":{
+                "pierceSD": true //only on level
+            }
+        }],
+        "keySetSelectors":{ 
+            "input": "name"    
         },
+        "valueSelectors": [
+            {
+                "input[name='$0' type='string']": "value"
+            }
+        ] //optional,
         "refreshOn": [],
     }'>
     <summary>...</summary>
-    <template be-repeated >
+    <template be-repeated be-observant>
     <div aria-columnheader></div>
     </template>
     <details itemscope>
