@@ -17,7 +17,7 @@ Collect/collate information that can be gleaned from HTML containing lists of da
                 "input[name='$0' type='string']": "value"
             }
         ] //optional,
-        "refreshOn": [],
+        "refreshOn": [], //optional
     }'>
     <summary>...</summary>
     <template be-repeated be-observant>

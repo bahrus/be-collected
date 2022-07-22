@@ -1,8 +1,36 @@
 {
   "name": "be-collected",
   "version": "0.0.0",
-  "description": "",
+  "keywords": [
+    "web-components",
+    "web-component",
+    "custom-element",
+    "custom-elements",
+    "decorator",
+    "behavior",
+    "directive"
+  ],
+  "description": "Collect/collate information that can be gleaned from HTML containing lists of data",
+  "type": "module",
   "main": "index.js",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./be-collected.js": "./be-collected.js"
+  },
+  "files": [
+    "*.*"
+  ],
+  "types": "types.d.ts",
+  "dependencies": {
+    "be-decorated": "0.0.125",
+    "be-hive": "0.0.48"
+  },
+  "devDependencies": {
+    "may-it-serve": "0.0.1",
+    "@skypack/package-check": "0.2.2",
+    "@custom-elements-manifest/analyzer": "0.6.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +38,7 @@
     "type": "git",
     "url": "git+https://github.com/bahrus/be-collected.git"
   },
-  "author": "",
+  "author": "Bruce Anderson <anderson.bruce.b@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bahrus/be-collected/issues"
