@@ -10,11 +10,11 @@ Collect/collate information that can be gleaned from HTML containing lists of da
             }
         }],
         "keySetSelectors":{ 
-            "input": "name"    
+            "[name]": "name"    
         },
         "valueSelectors": [
             {
-                "input[name='$0' type='string']": "value"
+                "input[name=$0 type=string]": "value"
             }
         ] //optional,
         "refreshOn": [], //optional
